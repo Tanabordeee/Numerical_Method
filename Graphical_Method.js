@@ -15,16 +15,16 @@ for(let i = 0; i <= 10 ; i++) {
     }else if (Math.abs(result) < Math.abs(closestValue2)){
         closestValue2 = result;
     }
-    for(let j = closestValue1 ; j <= closestValue2 ; j+=0.000001){
-        result = calculate(j);
-        if(Math.abs(result) < Math.abs(ClosestAns1)){
-            ClosestAns2 = ClosestAns1;
-            ClosestAns1 = result;
-        }else if (Math.abs(result) < Math.abs(ClosestAns2)){
-            ClosestAns2 = result;
-        }
-        console.log("ClosestAns1 = " , ClosestAns1);
-        console.log("ClosestAns2 = " , ClosestAns2);
+}
+for(let j = closestValue1 ; j <= closestValue2 ; j+=0.000001){
+    result = calculate(j);
+    if(Math.abs(result) < Math.abs(ClosestAns1)){
+        ClosestAns2 = ClosestAns1;
+        ClosestAns1 = result;
+    }else if (Math.abs(result) < Math.abs(ClosestAns2)){
+        ClosestAns2 = result;
     }
+    console.log("ClosestAns1 = " , ClosestAns1);
+    console.log("ClosestAns2 = " , ClosestAns2);
 }
 console.log("[ " + ClosestAns1 + " " + ClosestAns2 + " ]");
