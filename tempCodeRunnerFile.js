@@ -1,0 +1,1 @@
+console.log("[ " + ClosestAns1 + " " + ClosestAns2 + " ]");
