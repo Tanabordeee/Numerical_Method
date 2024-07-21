@@ -1,1 +1,1 @@
-console.log("[ " + ClosestAns1 + " " + ClosestAns2 + " ]");
+    console.log(i++);
