@@ -1,5 +1,5 @@
 function calculate(x){
-    let equation = Math.pow(x , 2) - 7 + x;
+    let equation = Math.pow(x , 3) - 7 + x;
     return equation;
 }
 
@@ -15,7 +15,7 @@ while(true){
     if (check < 0.000001){
         break;
     }
-    if(new_x == Infinity){
+    if(new_x == Infinity || new_x == -Infinity){
         console.log("can't find answer");
         break;
     }
