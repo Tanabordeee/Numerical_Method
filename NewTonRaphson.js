@@ -20,9 +20,6 @@ while (error > 0.000001){
     x_new = x;
     error = Math.abs(x_new - x_old);
     console.log("iteration : " , i , "X = " , x_new);
-    if(i == 4){
-        break;
-    }
     i++;
 }
 console.log("Final result: x =", x);
