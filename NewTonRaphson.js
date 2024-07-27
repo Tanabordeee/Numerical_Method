@@ -1,7 +1,7 @@
 const Math = require('mathjs');
-const derivative = Math.derivative('(1/2)*(x + 7/x)' , 'x');
+const derivative = Math.derivative('x^2-7' , 'x');
 function calculate(x){
-    const equation = (1/2)*(x + (7/x));
+    const equation = Math.pow(x , 2) - 7;
     return equation
 }
 
@@ -16,7 +16,9 @@ let i = 0;
 let error = 1;
 while (error > 0.000001){
     x_old = x;
-    x = x - calculate(x)/calculate_diff(x);
+    funcX = calculate(x);
+    funcX_diff = calculate_diff(x);
+    x = x - (funcX / funcX_diff);
     x_new = x;
     error = Math.abs(x_new - x_old);
     console.log("iteration : " , i , "X = " , x_new);
