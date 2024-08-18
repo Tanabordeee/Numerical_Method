@@ -1,33 +1,31 @@
+const math = require('mathjs');
 let A = [
     [4, -4, 0],
     [-1, 4, -2],
     [0, -2, 4],
 ];
 let B = [400, 400, 400];
-
 let n = A.length;
 let resultX = []
-
 for (let i = 0; i < n; i++) {
-
-    let pivot = A[i][i];
-    for (let j = i; j < n; j++) {
-        A[i][j] /= pivot;
-    }
-    B[i] /= pivot;
-
-    for (let k = 0; k < n; k++) {
-        if (k !== i) {
-            let factor = A[k][i];
-            for (let j = i; j < n; j++) {
-                A[k][j] -= factor * A[i][j];
+    for (let j = 0; j < n; j++) {
+        // ถ้าเป็น 00 11 22 กระโดดข้าม
+        if (i != j) {
+            let c = A[j][i] / A[i][i];
+            for (let k = 0; k < n; k++) {
+                A[j][k] = A[j][k] - c * A[i][k];
             }
-            B[k] -= factor * B[i];
+            B[j] = B[j] - c * B[i];
         }
     }
 }
-
-for (let i = 0; i < n; i++) {
-    resultX[i] = B[i];
+for(let i = 0 ; i < n; i++){
+    B[i] /= A[i][i];
+    A[i][i] /=A[i][i];
 }
-console.log("Solution:", resultX);
+A.forEach(element => {
+    console.log(element)
+});
+B.forEach((element, index) => {
+    console.log("X", index + 1, " = ", math.round(element));
+});

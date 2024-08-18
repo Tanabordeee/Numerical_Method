@@ -1,3 +1,4 @@
+const math = require('mathjs');
 let A = [
     [4, -4, 0],
     [-1, 4, -2],
@@ -41,6 +42,9 @@ for(let i = n - 1 ; i >= 0 ; i--){
     }
     resultX[i] /= A[i][i];
 }
-console.log("X1:", resultX[0]);
-console.log("X2:", resultX[1]);
-console.log("X3:", resultX[2]);
+A.forEach(element =>{
+    console.log(element)
+})
+resultX.forEach((element , index) =>{
+    console.log("X = ", index + 1 , " = " , math.round(element))
+})
