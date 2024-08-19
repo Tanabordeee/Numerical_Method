@@ -2,11 +2,11 @@ const math = require('mathjs');
 
 let A = [
     [-2, 3, 1],
-    [3, 4, -5],
+    [3, 4, -1],
     [1, -2, 1]
 ];
 
-let B = [9,0,4];
+let B = [9,0,-4];
 let n = A.length;
 let L = math.zeros(n, n).valueOf();
 
@@ -47,10 +47,4 @@ for (let i = n - 1; i >= 0; i--) {
     }
     X[i] = (Y[i] - sum) / L_transpose[i][i];
 }
-for(let i = 0 ; i < X.length ; i++) {
-    if(X[i] == NaN){
-        console.log("CAN'T CALCULATE WITH CHOLESKY");
-    }else{
-        console.log('X = ', X);
-    }
-}
+console.log('X = ', X);

@@ -6,7 +6,7 @@ const A = [
     [1, -2, 1]
 ];
 
-const B = [9,0,4];
+const B = [9,0,-4];
 let result = [];
 let temp = []
 for (let i = 0; i < 3; i++) {

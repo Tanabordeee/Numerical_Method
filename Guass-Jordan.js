@@ -5,7 +5,7 @@ const A = [
     [1, -2, 1]
 ];
 
-const B = [9,0,4];
+const B = [9,0,-4];
 let n = A.length;
 for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
