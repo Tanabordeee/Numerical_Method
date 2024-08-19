@@ -1,14 +1,14 @@
 const math = require('mathjs');
-let A = [
-    [4, -4, 0],
-    [-1, 4, -2],
-    [0, -2, 4],
+const A = [
+    [-2, 3, 1],
+    [3, 4, -5],
+    [1, -2, 1]
 ];
-let B = [400 , 400 , 400];
+
+const B = [9,0,4];
 
 let n = A.length;
 let factor = []
-let result = []
 let temp = []
 let factorB = []
 let tempB = B.map(row => row);

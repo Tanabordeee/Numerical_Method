@@ -1,11 +1,16 @@
 const math = require('mathjs');
-let A = [[4,-4,0],[-1,4,-2],[0,-2,4]]
+const A = [
+    [-2, 3, 1],
+    [3, 4, -5],
+    [1, -2, 1]
+];
+
+const B = [9,0,4];
 let L =[[1 , 0 , 0 ] ,
         [0 , 1 , 0 ],
         [0 , 0 , 1 ]
     ]
 let U = math.clone(A);
-let B = [400 , 400 , 400];
 for(let i = 0; i < A.length; i++){
     for(let j = i+1 ; j < A.length ; j++){
         // หา L ทำ GUASS ฝั่ง U

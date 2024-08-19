@@ -1,15 +1,14 @@
 const math = require('mathjs');
-let A = [
-    [4, -4, 0],
-    [-1, 4, -2],
-    [0, -2, 4],
+const A = [
+    [-2, 3, 1],
+    [3, 4, -5],
+    [1, -2, 1]
 ];
-let B = [400, 400, 400];
+
+const B = [9,0,4];
 let n = A.length;
-let resultX = []
 for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
-        // ถ้าเป็น 00 11 22 กระโดดข้าม
         if (i != j) {
             let c = A[j][i] / A[i][i];
             for (let k = 0; k < n; k++) {
