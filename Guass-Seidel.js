@@ -22,6 +22,8 @@ while(check){
         }
         temp_x[i] = x[i];
     }
-    count++;
-    x.map((val , index) => console.log("iteration "+ count + " X index : "+index + " = " + val));
+    if(check){
+        count++;
+        x.map((val , index) => console.log("iteration "+ count + " X index : "+index + " = " + val));
+    }
 }
