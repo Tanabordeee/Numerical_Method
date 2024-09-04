@@ -4,14 +4,14 @@ let B = [12,17,14,7]
 let x = [0,0,0,0]
 let temp_x = [0,0,0,0]
 let count = 0;
-let e = 0.0000001
+let e = 0.000001
 let check = true;
 while(check){
     for(let j = 0 ; j < x.length ; j++) {
         let sum = 0;
         for(let k = 0 ; k < x.length ; k++) {
             if( j != k){
-                sum += A[j][k] * x[k];
+                sum += A[j][k] * temp_x[k];
             }       
         }
         x[j] = (B[j] - sum) / A[j][j];
