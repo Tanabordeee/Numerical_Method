@@ -6,30 +6,24 @@ value = 46267;
 // y = [9.81,9.7487,9.6879,9.6879,9.5682];
 
 // Quadratic
-// x = [0 , 40000 , 80000];
-// y = [9.81 , 9.6879 , 9.5682]
+x = [0 , 40000 , 80000];
+y = [9.81 , 9.6879 , 9.5682]
 
 // linear
-x = [0 , 80000]
-y = [9.81 , 9.5682]
-let memory = {};
-function calculate(x , y , left , right , memory){
-       if(left === right){
-        return y[left];
-       }
-       let key = `${left},${right}`;
-       if(key in memory){
+// x = [0 , 80000]
+// y = [9.81 , 9.5682]
+function calculate(x , y , left , right , memory={}){
+    let key = `${left},${right}`;
+    if (key in memory) {
         return memory[key];
-       }
-       memory[key] = (calculate(x , y , left , right + 1) - calculate(x, y, left - 1, right))/(x[left] - x[right]);
-       return memory[key];
+    }
+    if(left === right){
+        return y[left];
+    }
+    memory[key] = (calculate(x , y , left , right + 1) - calculate(x, y, left - 1, right))/(x[left] - x[right]);
+    return memory[key];
 }
-// calculate(x , y , 2 , 1) - calculate(x , y , 1 , 0) / x[2] - x[0]
-// calculate(x , y , 2 , 2) = y[2] = 9.5682
-// calculate(x , y , 1 , 1) = y[1] = 9.6879
-
-//calculate(x , y , 1 , 1) = y[1] = 9.6879
-//calculate(x , y , 0 , 0) = y[0] = 9.81
+let memory = {};
 let result = y[0]; // c0 = f(X0);
 for(let i = 1; i < x.length ; i++){
     let term = calculate(x , y , i , 0 , memory);
