@@ -13,12 +13,12 @@ y = [9.81 , 9.6879 , 9.5682]
 // x = [0 , 80000]
 // y = [9.81 , 9.5682]
 function calculate(x , y , left , right , memory={}){
+    if(left === right){
+        return y[left];
+    }
     let key = `${left},${right}`;
     if (key in memory) {
         return memory[key];
-    }
-    if(left === right){
-        return y[left];
     }
     memory[key] = (calculate(x , y , left , right + 1) - calculate(x, y, left - 1, right))/(x[left] - x[right]);
     return memory[key];
