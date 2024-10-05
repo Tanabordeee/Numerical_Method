@@ -8,7 +8,6 @@ const A = [
 
 const B = [9,0,-4];
 let result = [];
-let temp = []
 for (let i = 0; i < 3; i++) {
     let temp = A.map(row => [...row]); 
     for (let j = 0; j < 3; j++) {

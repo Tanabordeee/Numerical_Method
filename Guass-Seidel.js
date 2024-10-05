@@ -24,6 +24,6 @@ while(check){
     }
     if(check){
         count++;
-        x.map((val , index) => console.log("iteration "+ count + " X index : "+index + " = " + val));
+        x.map((val , index) => console.log("iteration "+ count + " X index : "+ index  + " = " + val));
     }
 }

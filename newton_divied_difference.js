@@ -36,5 +36,3 @@ console.log(result);
 
 // c0 + c1(x - x0) + c2(x - x0)(x - x1)
 // c1 = f(x)
-
-

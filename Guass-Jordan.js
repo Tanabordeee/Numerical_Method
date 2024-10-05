@@ -10,9 +10,10 @@ let n = A.length;
 for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
         if (i != j) {
+            console.log(j , i)
             let c = A[j][i] / A[i][i];
             for (let k = 0; k < n; k++) {
-                A[j][k] = A[j][k] - c * A[i][k];
+                A[j][k] = A[j][k] - c * A[i][k]; 
             }
             B[j] = B[j] - c * B[i];
         }

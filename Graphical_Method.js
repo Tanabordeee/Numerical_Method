@@ -1,5 +1,5 @@
 function calculate(x) {
-    let equation = x^4-13;
+    let equation = 43*x-180;
     return equation;
 }
 function checkfun(x) {
