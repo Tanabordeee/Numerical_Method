@@ -9,7 +9,7 @@ let m = 2;
 
 let matrix1 = Array(m+1).fill(0).map(() => Array(m+1).fill(0));
 let matrix2 = Array(m+1).fill(0);
-
+matrix1[0][0] = n;
 //loop 4 times
 for (let i = 1; i <= m + 1; i++) {
 
@@ -34,14 +34,18 @@ for (let i = 1; i <= m + 1; i++) {
 
 
 let result = [];
-let detMatrix1 = math.det(matrix1);
 
 for (let i = 0; i < matrix1.length; i++) {
     let temp = matrix1.map(row => [...row]);
     for (let j = 0; j < matrix1.length; j++) {
         temp[j][i] = matrix2[j];
     }
-    let x = math.det(temp) / detMatrix1;
+    let x = math.det(temp) / math.det(matrix1);
     result.push(x);
 }
-console.log(result);
+
+let sum = 0;
+for(let i = 0 ; i < result.length; i++) {
+    sum += result[i] * math.pow(Xvalue , i);
+}
+console.log(sum);
