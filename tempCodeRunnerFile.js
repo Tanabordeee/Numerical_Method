@@ -1,3 +1,3 @@
-for(let i = 0 ; i < x.length ; i++){
-//     console.log(l[i]);    
-// }
+        // for (let L = 0; L < n; L++) {
+        //     sum += xData[j][L];
+        // }

@@ -14,6 +14,7 @@ matrix1[0][0] = n;
 for (let i = 1; i <= m + 1; i++) {
 
     for (let j = 1; j <= i; j++) {
+        
         let k = i + j - 2;
         let sum = 0;
         // loop sum x
