@@ -16,4 +16,7 @@ let diff3 = (x) => {
 let diff4 = (x) => {
     return (3 * func(x) - 14 * func(x-h) + 26 * func(x-h*2) - 24 * func(x-h*3) + 11 * func(x-h*4) - 2 * func(x - h*5))/math.pow(h,4);
 }
+let symbolicDiff2 = math.derivative(math.derivative('exp(x/3) + x^2', 'x'), 'x').evaluate({x: x});
+let error1 = math.abs((diff2(x) - symbolicDiff2) / diff2(x)) * 100 / 100;
+console.log(error1);
 console.log(diff2(x));
