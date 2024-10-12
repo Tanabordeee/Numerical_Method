@@ -15,6 +15,7 @@ let matrix2 = Array(k + 1).fill(0);
 
 matrix1[0][0] = n; 
 
+// หา 2 แถวบน
 for (let i = 1; i <= k; i++) {
     let sum = 0;
     for (let L = 0; L < n; L++) {
@@ -36,7 +37,7 @@ for (let i = 1; i <= k; i++) {
     }
 }
 
-matrix2[0] = y.reduce((acc, val) => acc + val, 0);
+matrix2[0] = y.reduce((acc, val) => acc + val, 0); // หา sum y
 for (let i = 1; i <= k; i++) {
     let sum = 0;
     for (let L = 0; L < n; L++) {
