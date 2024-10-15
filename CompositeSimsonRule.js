@@ -2,7 +2,7 @@ const math = require('mathjs');
 let n = 6;
 let b = 2;
 let a = -1;
-let h = (b-a)/n;
+let h = (b-a)/(2*n);
 let func = (x)=>{
     return math.pow(x,7) + 2*math.pow(x,3) - 1;
 }
